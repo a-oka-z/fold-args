@@ -1,6 +1,6 @@
 {
   "name": "fold-args",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a named arguments parser with a consistent robust protocol; via `folding` JavaScript argumenets in the sense of the computer language Scheme",
   "main": "index.mjs",
   "type": "module",
