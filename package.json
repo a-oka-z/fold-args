@@ -44,11 +44,11 @@
   },
   "author": {
     "name": "Atsushi Oka",
-    "url": "https://github.com/a-oka-z/fold-args.js"
+    "url": "https://github.com/a-oka-z/fold-args"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/a-oka-z/fold-args.js"
+    "url": "https://github.com/a-oka-z/fold-args"
   },
   "license": "ISC",
   "devDependencies": {
