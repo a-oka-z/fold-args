@@ -103,7 +103,7 @@ Thank you very much for your attention.
 
 [Atsushi Oka][] / I'm from Tokyo. For further information, see my github account.
 
-[Github](Github Repository of `fold-args`)
+[Github Repository of `fold-args`](Github)
 
 [Github]: https://github.com/a-oka-z/fold-args
 [Atsushi Oka]: https://github.com/a-oka-z/
