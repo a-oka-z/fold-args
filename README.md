@@ -99,11 +99,12 @@ const processed = {
 
  Conclusion
 --------------------------------------------------------------------------------
-[Github Repository of `fold-args`]: https://github.com/a-oka-z/fold-args
 Thank you very much for your attention.
 
 [Atsushi Oka][] / I'm from Tokyo. For further information, see my github account.
 
-[Atsushi Oka]: https://github.com/a-oka-z/
+[Github](Github Repository of `fold-args`)
 
+[Github]: https://github.com/a-oka-z/fold-args
+[Atsushi Oka]: https://github.com/a-oka-z/
 
