@@ -2,8 +2,8 @@
  fold-args
 ================================================================================
 
-A named-argument parser which also defines a consistent protocol for JavaScript
-functions.
+A named arguments parser with a consistent robust protocol for JavaScript; via
+`folding` argumenets in the sense of the computer language Scheme.
 
 
  Synopsis
@@ -95,6 +95,19 @@ const processed = {
 };
 ```
 
+ History
+--------------------------------------------------------------------------------
+#### v1.0.0 ####
+Relased.
+(Jan 8 2023)
+
+#### v1.0.1 ####
+Updated `README.md`.
+(Jan 8 2023)
+
+#### v1.0.2 ####
+Updated `README.md`.
+(Sun, 08 Jan 2023 17:01:38 +0900)
 
 
  Conclusion
