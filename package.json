@@ -51,7 +51,9 @@
     "url": "https://github.com/a-oka-z/fold-args"
   },
   "license": "ISC",
-  "devDependencies": {
+  "bak-devDependencies": {
     "sqlmacro": "^0.1.0"
+  },
+  "devDependencies": {
   }
 }
