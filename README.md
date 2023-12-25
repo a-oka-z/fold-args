@@ -1,20 +1,82 @@
 
  fold-args
 ================================================================================
-
-A named arguments parser with a consistent robust protocol for JavaScript; via
-`folding` argumenets in the sense of the computer language Scheme.
-
+`fold-args` is a multi-purpose named-arguments parser with a consistent robust
+protocol.
 
  Synopsis
 --------------------------------------------------------------------------------
+The main funciton of `fold-args` is `fold_args()` function.
+
 
 ```javascript
-function fold_args( 
-    args,                 // : array of arguments, 
-    default_args,         // : array or an object, 
+function fold_args(
+    args,                 // : array of arguments,
+    default_args,         // : array or an object,
     transformers_for_args // : array or an object )
 ```
+
+The function `fold_args()` is designed to parse passed arguments.
+
+Sometime you may want to write a function such as:
+
+```javascript
+var result = set_user_info({
+  username : 'B_B_King',
+  age      :  30,
+  comment  : 'foobar',
+});
+```
+
+And you may implement the function as following:
+
+```javascript
+function set_user_info({
+  username=null,
+  age=null,
+  comment=null,
+}) {
+  const user = get_user( usename );
+  user.set_info( age, comment );
+  user.commit();
+}
+```
+
+In such case, `fold-args` may allow you to define functions in a flexable way.
+
+For example, `fold-args` allows you to define functions take multiple arguments.
+
+Usually such functions with named-arguments takes only the first argument.
+
+```javascript
+// This may not work.
+set_user_info( { age: 30 },  { username: 'B_B_King' } );
+```
+
+The main functionality of `fold_args()` function is merging all objects specified in
+arguments.
+
+
+```javascript
+function set_user_info(...nargs) {
+  // process arguments by `fold_args()` function
+  const {
+    username=null,
+    age=null,
+    comment=null,
+  } = fold_args( nargs );
+  const user = get_user( usename );
+  user.set_info( age, comment );
+  user.commit();
+}
+
+// This works
+set_user_info( { age: 30 },  { username: 'B_B_King' } );
+```
+
+There are some other functionalities which may help to implement flexable
+argument parsing.
+
 
 ### If multiple arguments are specified, merge them to a single object ###
 
@@ -87,7 +149,8 @@ const o2 = {
 },
 ```
 
-The processed object is 
+The processed object is
+
 ```javascript
 const processed = {
   'foo' : [1],
@@ -121,3 +184,4 @@ Thank you very much for your attention.
 [Github]: https://github.com/a-oka-z/fold-args
 [Atsushi Oka]: https://github.com/a-oka-z/
 
+[]: <> ( vim: set ts=2 sw=2: )
