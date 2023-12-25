@@ -59,10 +59,16 @@ test("test7 default symbol ... 2 ", ()=>{
   console.error(o);
 });
 
-// ADDED (Mon, 25 Dec 2023 17:19:15 +0900)
-test("test7 default symbol ... 2 ", ()=>{
-  const o = fold_args( [{a:5}], { a:[] } , {a:the_all } );
-  console.error(o);
-  expect(o).toEqual( {a:[]})
+/*
+ * Each named argument is aggregated into an array and the array is processed
+ * by a corresponding transformer which is specified in transformers_for_args.
+ * ADDED (Mon, 25 Dec 2023 17:19:15 +0900)
+ */
+test("test7 default value ... 2 ", ()=>{
+  {
+    const o = fold_args( [{a:5}], { a:[] } , {a:the_all } );
+    console.error(o);
+    expect(o).toEqual( {a:[]})
+  }
   console.error(o);
 });
